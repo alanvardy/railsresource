@@ -1,37 +1,27 @@
+<% provide(:title, @category.title) %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 mt-3 bg-red3 text-grey0 rounded-top">
+            <h1 class="text-center">Rails Resource</h1>
+        </div>
 
-<div class="row bg-grey3">
-<div class="col-6 mx-auto bg-grey0">
-    <h1 class="text-center">Rails Resource</h1>
-    <div class="d-flex justify-content-center">
-    <div>
-        <%= form_tag("https://www.startpage.com/do/asearch?", method: "get", class: "form-inline my-2 my-lg-0", target: "_blank") do %>
-        <%= text_field_tag :query, nil, class: 'form-control mr-sm-2', placeholder: 'Search the last year' %>
-        <%= hidden_field_tag :with_date, "y" %>
-        <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
+        <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 px-3 px-md-5 py-3 bg-grey0">
+            <%= render 'main/navbuttons' %>
+        </div>
+            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 px-3 px-md-5 py-3 bg-grey1">
+                <%= render 'main/rails_search' %>
+                <%= render 'main/so_search' %>
+                <%= render 'main/year_search' %>
+            </div>
+        <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 px-3 px-md-5 py-3 bg-grey0">
+            <%= render 'main/datadisplay' %>
+            <%= render 'main/navbuttons' %>
+        </div>
+
+        <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 mb-3 bg-red3 rounded-bottom d-flex justify-content-center py-1">
+        <% if !admin? %>
+            <%= link_to 'Log in', session_new_path, class: 'btn btn-sm btn-info' %>
         <% end %>
-    </div>
-
-    </div>
-                <% @categories.each do |category| %>
-                        <h2>
-                            <%= category.title %>
-                        </h2>
-                        <ul>
-                            <% category.topics.each do |topic| %>
-                            <li>
-                                <h3>
-                                    <%= topic.title %>
-                                </h3>
-                                <ul>
-                                    <% topic.resources.each do |resource|%>
-                                    <li>
-                                        <%= link_to resource.title, resource.url, target: "_blank" %>
-                                    </li>
-                                    <% end %>
-                                </ul>
-                            </li>
-                            <% end %>
-                        </ul>
-                        <% end %>
+        </div>
     </div>
 </div>

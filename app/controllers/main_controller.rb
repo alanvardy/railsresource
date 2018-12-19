@@ -1,5 +1,6 @@
 class MainController < ApplicationController
   def index
-    @categories = Category.all
+    @category = Category.get(params[:id])
+    @title = @category.title
   end
 end

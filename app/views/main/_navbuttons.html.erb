@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-center">
+    <div>
+        <ul class="nav nav-pills">
+            <% Category.all.each do |category| %>
+                <li class="nav-item">
+                    <%= link_to category.title, root_path + category.title.downcase, class: "nav-link #{'active' if category.title == @title}" %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</div>
