@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root 'main#index'
   resources :session, only: [:new, :create, :destroy]
   get '/check.txt', to: proc {[200, {}, ['it_works']]}
+  get '/:id', to: 'main#index'
 end

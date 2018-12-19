@@ -1,0 +1,19 @@
+<h2>
+    <%= @category.title %>
+</h2>
+<div class="row my-5">
+    <% @category.topics.each do |topic| %>
+        <div class="col-12 col-md-6 col-xl-4">
+            <h3>
+                <%= topic.title %>
+            </h3>
+            <ul>
+                <% topic.resources.each do |resource|%>
+                <li>
+                    <%= link_to resource.title, resource.url, target: "_blank" %>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+</div>

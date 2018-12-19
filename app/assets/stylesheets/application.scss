@@ -17,16 +17,17 @@ $theme-colors: ("grey0": hsl(204, 0%, 100%),
 "grey1": hsl(204, 2%, 93%),
 "grey2": hsl(204, 3%, 85%),
 "grey3": hsl(204, 6%, 60%),
-"primary": hsl(4, 97%, 23%),
+"red3": hsl(4, 97%, 23%),
 "secondary": hsl(14, 95%, 34%),
 "dark": hsl(220, 68%, 7%),
 "danger": hsl(4, 70%, 40%),
 "warning": hsl(12, 92%, 63%),
 "info": hsl(234, 82%, 70%),
 );
-$title-font: 'Spectral',
+$title-font: 'Alegreya SC',
 serif;
-$font-family-base: 'Open Sans';
+$font-family-base: 'IBM Plex Sans Condensed',
+sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,700|IBM+Plex+Sans+Condensed:400,600');
 @import "bootstrap";
 @import "font-awesome-sprockets";
@@ -36,4 +37,13 @@ h1,
 h2,
 h3 {
   font-family: $title-font;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
 }
