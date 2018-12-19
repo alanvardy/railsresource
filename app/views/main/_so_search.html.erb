@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center pt-1">
     <div>
         <%= form_tag("https://stackoverflow.com/search?", method: "get", class: "form-inline my-2 my-lg-0", target: "_blank", enforce_utf8: false) do %>
-        <%= text_field_tag :q, nil, class: 'form-control mr-sm-2', placeholder: 'Search Stack Overflow', size: 30 %>
+        <%= text_field_tag :q, nil, class: 'form-control mr-sm-2', placeholder: 'Search Stack Overflow', size: locals[:width] %>
         <%= hidden_field_tag :createdat, value: '2y'%>
         <%= submit_tag("Search", name: nil, class: "btn btn-outline-red3 my-2 my-sm-0") %>
         <% end %>
