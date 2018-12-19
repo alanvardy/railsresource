@@ -1,25 +1,37 @@
 
-<div class="container">
-<h1 class="text-center">Rails Resource</h1>
-            <% @categories.each do |category| %>
-                    <h2>
-                        <%= category.title %>
-                    </h2>
-                    <ul>
-                        <% category.topics.each do |topic| %>
-                        <li>
-                            <h3>
-                                <%= topic.title %>
-                            </h3>
-                            <ul>
-                                <% topic.resources.each do |resource|%>
-                                <li>
-                                    <%= link_to resource.title, resource.url, target: "_blank" %>
-                                </li>
-                                <% end %>
-                            </ul>
-                        </li>
+<div class="row bg-grey3">
+<div class="col-6 mx-auto bg-grey0">
+    <h1 class="text-center">Rails Resource</h1>
+    <div class="d-flex justify-content-center">
+    <div>
+        <%= form_tag("https://www.startpage.com/do/asearch?", method: "get", class: "form-inline my-2 my-lg-0", target: "_blank") do %>
+        <%= text_field_tag :query, nil, class: 'form-control mr-sm-2', placeholder: 'Search the last year' %>
+        <%= hidden_field_tag :with_date, "y" %>
+        <%= submit_tag("Search", class: "btn btn-outline-success my-2 my-sm-0") %>
+        <% end %>
+    </div>
+
+    </div>
+                <% @categories.each do |category| %>
+                        <h2>
+                            <%= category.title %>
+                        </h2>
+                        <ul>
+                            <% category.topics.each do |topic| %>
+                            <li>
+                                <h3>
+                                    <%= topic.title %>
+                                </h3>
+                                <ul>
+                                    <% topic.resources.each do |resource|%>
+                                    <li>
+                                        <%= link_to resource.title, resource.url, target: "_blank" %>
+                                    </li>
+                                    <% end %>
+                                </ul>
+                            </li>
+                            <% end %>
+                        </ul>
                         <% end %>
-                    </ul>
-                    <% end %>
+    </div>
 </div>
