@@ -1,4 +1,25 @@
-<h1>Rails Resource</h1>
-<p>Find me in app/views/main/index.html.erb</p>
 
-daterange:<%= Date.today.jd - 730 %>-<%= Date.today.jd %>
+<div class="container">
+<h1 class="text-center">Rails Resource</h1>
+            <% @categories.each do |category| %>
+                    <h2>
+                        <%= category.title %>
+                    </h2>
+                    <ul>
+                        <% category.topics.each do |topic| %>
+                        <li>
+                            <h3>
+                                <%= topic.title %>
+                            </h3>
+                            <ul>
+                                <% topic.resources.each do |resource|%>
+                                <li>
+                                    <%= link_to resource.title, resource.url, target: "_blank" %>
+                                </li>
+                                <% end %>
+                            </ul>
+                        </li>
+                        <% end %>
+                    </ul>
+                    <% end %>
+</div>

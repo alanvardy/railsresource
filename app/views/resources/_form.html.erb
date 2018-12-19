@@ -1,0 +1,15 @@
+    <%= simple_form_for(@resource) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+      <div class="form-inputs">
+        <%= f.input :title %>
+        <%= f.input :url %>
+        <%= f.input :description %>
+        <%= f.association :topic, label_method: :long_title, value_method: :id %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
