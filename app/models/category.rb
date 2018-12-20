@@ -3,17 +3,12 @@ class Category < ApplicationRecord
   has_many :resources, through: :topics
 
   def self.get(id)
-    case id
-    when "models"
-      find_by(title: 'Models')
-    when "views"
-      find_by(title: 'Views')
-    when "controllers"
-      find_by(title: 'Controllers')
-    when "tutorials"
-      find_by(title: 'Tutorials')
+    if id.nil?
+      return find_by(title: 'Models')
     else
-      find_by(title: 'Models')
+      id.capitalize!
     end
+    raise ActionController::RoutingError.new('Not Found') if Category.all.none? {|t| t.title == id}
+    find_by(title: id)
   end
 end
