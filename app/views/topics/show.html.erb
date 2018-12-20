@@ -1,9 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+    <div class="my-5 p-3 rounded bg-grey0 col-12 col-lg-6 offset-lg-3">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @topic.title %>
-</p>
+      <p>
+        <strong>Title:</strong>
+        <%= @topic.title %>
+      </p>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+      <%= link_to 'Edit', edit_topic_path(@topic) %> |
+      <%= link_to 'Back', topics_path %>
+    </div>
+</div>

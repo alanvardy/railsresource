@@ -2,8 +2,8 @@
     <%= form_tag("https://api.rubyonrails.org/?", method: "get", class: "input-group", target: "_blank", enforce_utf8: false) do %>
         <%= text_field_tag :q, nil, class: 'form-control', placeholder: 'Search the Rails API'%>
         <div class="input-group-append">
-            <%= button_tag :submit, name: nil, class: "btn btn-outline-red3" do %>
-                <i class="fas fa-arrow-right"></i>
+            <%= button_tag :submit, name: nil, class: "btn btn-outline-red3 search-button" do %>
+                <i class="fas fa-train"></i>
             <% end %>
         </div>
     <% end %>
@@ -13,8 +13,8 @@
     <%= form_tag("https://stackoverflow.com/search?", method: "get", class: "input-group", target: "_blank", enforce_utf8: false) do %>
         <%= text_field_tag :q, nil, class: 'form-control', placeholder: 'Search Stack Overflow'%>
         <div class="input-group-append">
-            <%= button_tag :submit, name: nil, class: "btn btn-outline-red3" do %>
-                <i class="fas fa-arrow-right"></i>
+            <%= button_tag :submit, name: nil, class: "btn btn-outline-red3 search-button" do %>
+                <i class="fab fa-stack-overflow"></i>
             <% end %>
         </div>
     <% end %>
@@ -25,8 +25,8 @@
         <%= text_field_tag :query, nil, class: 'form-control', placeholder: 'Search the last year of Google'%>
         <%= hidden_field_tag :with_date, "y" %>
         <div class="input-group-append">
-            <%= button_tag :submit, name: nil, class: "btn btn-outline-red3" do %>
-                <i class="fas fa-arrow-right"></i>
+            <%= button_tag :submit, name: nil, class: "btn btn-outline-red3 search-button" do %>
+                <i class="fab fa-google"></i>
             <% end %>
         </div>
     <% end %>
