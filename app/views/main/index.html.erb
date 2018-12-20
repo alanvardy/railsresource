@@ -1,34 +1,27 @@
 <% provide(:title, @category.title) %>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 mt-3 bg-red3 text-grey0 rounded-top">
+        <div class="<%= common_sizing %> mt-3 bg-red3 text-grey0 rounded-top">
             <h1 class="text-center">Rails Resource</h1>
         </div>
 
-        <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 py-3 bg-grey0">
+        <div class="<%= common_sizing %> py-3 bg-grey0">
             <%= render 'main/navbuttons' %>
         </div>
-            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 py-3 bg-grey1 d-none d-xl-block">
-                <%= render 'main/rails_search', locals: {width: 60} %>
-                <%= render 'main/so_search', locals: {width: 60} %>
-                <%= render 'main/year_search', locals: {width: 60} %>
+        <div class="<%= common_sizing %> py-3 bg-grey1 d-xl-none">
+            <%= render 'main/search' %>
+        </div>
+        <div class="<%= common_sizing %> py-3 bg-grey1 d-none d-xl-block row">
+            <div class="col-6 offset-3">
+                <%= render 'main/search' %>
             </div>
-            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2py-3 bg-grey1 d-none d-md-block d-xl-none">
-                <%= render 'main/rails_search', locals: {width: 30} %>
-                <%= render 'main/so_search', locals: {width: 30} %>
-                <%= render 'main/year_search', locals: {width: 30} %>
-            </div>
-            <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2py-3 bg-grey1 d-block d-md-none">
-                <%= render 'main/rails_search', locals: {width: 20} %>
-                <%= render 'main/so_search', locals: {width: 20} %>
-                <%= render 'main/year_search', locals: {width: 20} %>
-            </div>
-        <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 px-3 px-md-5 py-3 bg-grey0">
+        </div>
+        <div class="<%= common_sizing %> px-3 px-md-5 py-3 bg-grey0">
             <%= render 'main/datadisplay' %>
             <%= render 'main/navbuttons' %>
         </div>
 
-        <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 mb-3 bg-red3 rounded-bottom d-flex justify-content-center py-1">
+        <div class="<%= common_sizing %> mb-3 bg-red3 rounded-bottom d-flex justify-content-center py-1">
         <% if !admin? %>
             <%= link_to 'Log in', session_new_path, class: 'btn btn-sm btn-info' %>
         <% end %>
