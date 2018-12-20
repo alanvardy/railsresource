@@ -10,6 +10,8 @@ class Category < ApplicationRecord
       find_by(title: 'Views')
     when "controllers"
       find_by(title: 'Controllers')
+    when "tutorials"
+      find_by(title: 'Tutorials')
     else
       find_by(title: 'Models')
     end
