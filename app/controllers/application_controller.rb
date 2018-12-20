@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authentication_required!
-    session[:current_user] || raise(ApplicationNotAuthenticated)
+    session[:admin] || raise(ApplicationNotAuthenticated)
   end
 end
