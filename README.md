@@ -1,24 +1,41 @@
-# README
+# Rails Resource
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a pet project that assists me with building rails apps. Check it out at [railsresource.vardy.codes](https://railsresource.vardy.codes/)
 
-Things you may want to cover:
+## Get this website running locally
 
-* Ruby version
+To install and run you need to 
 
-* System dependencies
+1. install [Postgres on your system](https://www.alanvardy.com/posts/7)
+2. Edit your database.yml to get the database connected
+3. Create and migrate your database
 
-* Configuration
+```bash
+rails db:create
+rails db:migrate
+```
 
-* Database creation
+4. Install gems
 
-* Database initialization
+```bash
+bundle install
+```
 
-* How to run the test suite
+5. Add a .env file in the root and add a username and password
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+# .env
 
-* Deployment instructions
+ADMIN_USERNAME=admin
+ADMIN_PASS=password
+```
 
-* ...
+Run the server
+
+```bash
+rails s
+```
+
+## License
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License.](https://creativecommons.org/licenses/by-nc/4.0/)
