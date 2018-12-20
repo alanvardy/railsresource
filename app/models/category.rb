@@ -8,7 +8,8 @@ class Category < ApplicationRecord
     else
       id.capitalize!
     end
-    file_not_found if Category.all.none? {|t| t.title == id}
+
+    file_not_found if Category.all.none? { |cat| cat.title == id }
 
     find_by(title: id)
   end
