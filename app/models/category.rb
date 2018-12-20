@@ -8,7 +8,12 @@ class Category < ApplicationRecord
     else
       id.capitalize!
     end
-    raise ActionController::RoutingError.new('Not Found') if Category.all.none? {|t| t.title == id}
+    file_not_found if Category.all.none? {|t| t.title == id}
+
     find_by(title: id)
+  end
+
+  def file_not_found
+    raise ActionController::RoutingError.new('Not Found')
   end
 end
