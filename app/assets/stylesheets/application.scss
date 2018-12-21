@@ -10,8 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
 $theme-colors: ("grey0": hsl(204, 0%, 100%),
 "grey1": hsl(204, 2%, 93%),
@@ -23,6 +21,11 @@ $theme-colors: ("grey0": hsl(204, 0%, 100%),
 "danger": hsl(4, 70%, 40%),
 "warning": hsl(12, 92%, 63%),
 "info": hsl(234, 82%, 70%),
+
+"odinproject": #E3B261,
+"railsguides": #C52F24,
+"other": hsl(204, 6%, 60%),
+
 );
 $title-font: 'Alegreya SC',
 serif;
@@ -49,5 +52,9 @@ h3 {
 }
 
 .search-button {
-  width:40px;
+  width: 40px;
+}
+
+li {
+  list-style: none;
 }

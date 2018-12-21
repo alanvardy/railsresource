@@ -7,6 +7,7 @@
         <%= f.input :url %>
         <%= f.input :description %>
         <%= f.association :topic, label_method: :long_title, value_method: :id %>
+        <%= f.association :source, label_method: :title, value_method: :id %>
       </div>
 
       <div class="form-actions">
