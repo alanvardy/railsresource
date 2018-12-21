@@ -11,9 +11,7 @@
                 <% topic.resources.each do |resource|%>
                 <li>
                     <% if !resource.source.nil? %>
-                        <button type="button" class=" mr-1 px-1 py-0 btn btn-outline-<%= resource.source.color %> btn-sm mb-1" data-container="body" data-toggle="popover" data-placement="left" data-content="<%= resource.source.title %>">
-                            <small><%= resource.source.abbr %></small>
-                        </button>
+                        <small><a tabindex="0" class=" mr-1 px-1 py-0 btn btn-outline-<%= resource.source.color %> btn-sm mb-1" role="button" data-toggle="popover" data-trigger="focus" title="<%= resource.source.abbr %>" data-content="<%= resource.source.title %>"><%= resource.source.abbr %></a></small>
                     <% end %>
                     <%= link_to resource.title, resource.url, target: "_blank" %>
                 </li>
