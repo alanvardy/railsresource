@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="my-5 p-3 rounded bg-grey0 col-12 col-lg-6 offset-lg-3">
+      <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Title:</strong>
+      <%= @source.title %>
+    </p>
+
+    <p>
+      <strong>Abbr:</strong>
+      <%= @source.abbr %>
+    </p>
+
+    <p>
+      <strong>Color:</strong>
+      <%= @source.color %>
+    </p>
+
+    <%= link_to 'Edit', edit_source_path(@source) %> |
+    <%= link_to 'Back', sources_path %>
+  </div>
+</div>

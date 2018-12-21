@@ -16,6 +16,14 @@
         <strong>Description:</strong>
         <%= @resource.description %>
       </p>
+      <p>
+        <strong>Topic:</strong>
+        <%= @resource.topic.long_title %>
+      </p>
+      <p>
+        <strong>Topic:</strong>
+        <%= @resource.source.title %>
+      </p>
 
       <%= link_to 'Edit', edit_resource_path(@resource) %> |
       <%= link_to 'Back', resources_path %>

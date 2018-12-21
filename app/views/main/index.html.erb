@@ -1,4 +1,10 @@
 <% provide(:title, @category.title) %>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();
+});
+</script>
+
 <div class="container-fluid">
     <div class="row">
         <div class="<%= common_sizing %> mt-3 bg-red3 text-grey0 rounded-top">
