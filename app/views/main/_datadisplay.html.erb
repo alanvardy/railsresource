@@ -10,10 +10,11 @@
             <ul>
                 <% topic.resources.each do |resource|%>
                 <li>
-                    <button type="button" class=" mr-1 px-1 py-0 btn btn-outline-<%= resource.source.color %> btn-sm mb-1" data-container="body" data-toggle="popover" data-placement="left" data-content="<%= resource.source.title %>">
-                        <small><%= resource.source.abbr %></small>
-                    </button>
-
+                    <% if !resource.source.nil? %>
+                        <button type="button" class=" mr-1 px-1 py-0 btn btn-outline-<%= resource.source.color %> btn-sm mb-1" data-container="body" data-toggle="popover" data-placement="left" data-content="<%= resource.source.title %>">
+                            <small><%= resource.source.abbr %></small>
+                        </button>
+                    <% end %>
                     <%= link_to resource.title, resource.url, target: "_blank" %>
                 </li>
                 <% end %>
