@@ -2,18 +2,19 @@
     <%= @category.title %>
 </h2>
 <div class="row my-5">
-    <% @category.topics.each do |topic| %>
+    <% @category.topics.order(title: :asc).each do |topic| %>
         <div class="col-12 col-md-6 col-xl-4">
             <h3>
-                <%= topic.title %>
+                <%= topic.title %> <small><%= (link_to 'edit', edit_topic_path(topic)) if admin? %></small>
             </h3>
             <ul>
-                <% topic.resources.each do |resource|%>
+                <% topic.resources.order(title: :asc).each do |resource|%>
                 <li>
                     <% if !resource.source.nil? %>
                         <small><a tabindex="0" data-placement="left" class=" mr-1 px-1 py-0 btn btn-outline-<%= resource.source.color %> btn-sm mb-1" role="button" data-toggle="popover" data-trigger="focus" data-content="<%= resource.source.title %>"><%= resource.source.abbr %></a></small>
                     <% end %>
                     <%= link_to resource.title, resource.url, target: "_blank" %>
+                    <small><%= (link_to 'edit', edit_resource_path(resource)) if admin? %></small>
                 </li>
                 <% end %>
             </ul>
