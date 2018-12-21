@@ -1,13 +1,13 @@
-<div class="row">
-    <div class="my-5 p-3 rounded bg-grey0 col-12 col-lg-6 offset-lg-3">
-      <p id="notice"><%= notice %></p>
+<%= content_for :body do %>
+  <p id="notice"><%= notice %></p>
 
-      <p>
-        <strong>Title:</strong>
-        <%= @topic.title %>
-      </p>
+  <p>
+    <strong>Title:</strong>
+    <%= @topic.title %>
+  </p>
 
-      <%= link_to 'Edit', edit_topic_path(@topic) %> |
-      <%= link_to 'Back', topics_path %>
-    </div>
-</div>
+  <%= link_to 'Edit', edit_topic_path(@topic) %> |
+  <%= link_to 'Back', topics_path %>
+<% end %>
+
+<%= render 'layouts/small_page' %>
