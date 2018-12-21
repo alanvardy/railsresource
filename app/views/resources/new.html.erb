@@ -1,8 +1,8 @@
-<div class="row">
-    <div class="my-5 p-3 rounded bg-grey0 col-12 col-lg-6 offset-lg-3">
-        <h1>New Resource</h1>
+<%= content_for :body do %>
+    <h1>New Resource</h1>
 
-        <%= render 'form', resource: @resource %>
-        <%= link_to 'Back', resources_path %>
-    </div>
-</div>
+    <%= render 'form', resource: @resource %>
+    <%= link_to 'Back', resources_path %>
+<% end %>
+
+<%= render 'layouts/small_page' %>

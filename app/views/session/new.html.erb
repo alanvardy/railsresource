@@ -1,20 +1,20 @@
-<div class="row">
-    <div class="my-5 p-3 rounded bg-grey0 col-12 col-lg-6 offset-lg-3">
-      <h1>Admin Login</h1>
-        <%= form_for @admin, url: session_index_path do |f| %>
-          <div class="form-group">
-            <%= f.label :username %>
-            <%= f.text_field :username, class: 'form-control'%>
-          </div>
-
-          <div class="form-group">
-            <%= f.label :password %>
-            <%= f.password_field :password, class: 'form-control'%>
-          </div>
-
-          <div class="form-group">
-            <%= f.submit 'Log In', class: 'btn btn-outline-primary'%>
-          </div>
-        <% end %>
+<%= content_for :body do %>
+<h1>Admin Login</h1>
+  <%= form_for @admin, url: session_index_path do |f| %>
+    <div class="form-group">
+      <%= f.label :username %>
+      <%= f.text_field :username, class: 'form-control'%>
     </div>
-</div>
+
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit 'Log In', class: 'btn btn-outline-primary'%>
+    </div>
+  <% end %>
+<% end %>
+
+<%= render 'layouts/small_page' %>
