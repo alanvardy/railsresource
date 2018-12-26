@@ -15,6 +15,9 @@ $theme-colors: ("grey0": hsl(204, 0%, 100%),
 "grey1": hsl(204, 2%, 93%),
 "grey2": hsl(204, 3%, 85%),
 "grey3": hsl(204, 6%, 60%),
+"grey4": hsl(204, 9%, 40%),
+"grey5": hsl(204, 12%, 20%),
+"grey6": hsl(204, 15%, 10%),
 "red3": hsl(4, 97%, 23%),
 "secondary": hsl(14, 95%, 34%),
 "dark": hsl(220, 68%, 7%),
@@ -25,13 +28,14 @@ $theme-colors: ("grey0": hsl(204, 0%, 100%),
 "odinproject": rgb(216, 157, 61),
 "railsguides": #C52F24,
 "railstutorial": rgb(59, 100, 158),
-"devhints": rgb(6, 6, 31),
+"devhints": rgb(89, 89, 161),
 "other": hsl(210, 3%, 31%),
 
 );
 $title-font: 'Alegreya SC',
 serif;
-$font-family-base: 'Sarabun', sans-serif;
+$font-family-base: 'Sarabun',
+sans-serif;
 @import url('https://fonts.googleapis.com/css?family=Alegreya+SC:400,700|Sarabun');
 @import "bootstrap";
 @import "font-awesome-sprockets";

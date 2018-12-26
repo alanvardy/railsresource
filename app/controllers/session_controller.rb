@@ -26,4 +26,14 @@ class SessionController < ApplicationController
     flash[:success] = 'You have logged out'
     redirect_to root_path
   end
+
+  def dark
+    session[:dark] = true
+    redirect_back(fallback_location: root_path)
+  end
+
+  def light
+    session[:dark] = nil
+    redirect_back(fallback_location: root_path)
+  end
 end

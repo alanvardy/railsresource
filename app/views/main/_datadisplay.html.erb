@@ -13,7 +13,7 @@
                     <% if !resource.source.nil? %>
                         <small><a tabindex="0" data-placement="left" class=" mr-1 px-1 py-0 btn btn-outline-<%= resource.source.color %> btn-sm mb-1" role="button" data-toggle="popover" data-trigger="focus" data-content="<%= resource.source.title %>"><%= resource.source.abbr %></a></small>
                     <% end %>
-                    <%= link_to resource.title, resource.url, target: "_blank" %>
+                    <%= link_to resource.title, resource.url, target: "_blank", class: style_link %>
                     <small><%= (link_to 'edit', edit_resource_path(resource)) if admin? %></small>
                 </li>
                 <% end %>
