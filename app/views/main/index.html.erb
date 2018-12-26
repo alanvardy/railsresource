@@ -1,19 +1,19 @@
 <% provide(:title, @category.title) %>
 <%= render 'layouts/popover_script' %>
 
-<div class="<%= common_sizing %> mt-3 bg-red3 text-grey0 rounded-top">
+<div class="<%= common_sizing %> mt-3 <%= style_headerfooter %> rounded-top">
     <h1 class="text-center">Rails Resource</h1>
 </div>
 
-<div class="<%= common_sizing %> py-3 bg-grey0">
+<div class="<%= common_sizing %> py-3 <%= style_body %>">
     <%= render 'main/navbuttons' %>
 </div>
-<div class="<%= common_sizing %> py-3 bg-grey1">
+<div class="<%= common_sizing %> py-3 <%= style_body2 %>">
     <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
         <%= render 'main/search' %>
     </div>
 </div>
-<div class="<%= common_sizing %> px-3 px-md-5 py-3 bg-grey0">
+<div class="<%= common_sizing %> px-3 px-md-5 py-3 <%= style_body %>">
     <%= render 'main/datadisplay' %>
     <%= render 'main/navbuttons' %>
 </div>

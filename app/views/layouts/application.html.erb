@@ -9,7 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class=bg-grey3>
+  <body class="<%= style_background %>">
   <%= render 'layouts/navbar' if admin? %>
   <div class="container-fluid">
     <div class="row">
