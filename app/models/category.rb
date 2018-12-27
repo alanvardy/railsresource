@@ -4,14 +4,14 @@ class Category < ApplicationRecord
 
   def self.get(id)
     if id.nil?
-      return find_by(title: 'Models')
+      return Rails.cache.fetch('models') { puts 'not cached'; find_by(title: 'Models') }
     else
       id.capitalize!
     end
 
     file_not_found if Category.all.none? { |cat| cat.title == id }
 
-    find_by(title: id)
+    Rails.cache.fetch(id) { puts 'not cached'; find_by(title: id) }
   end
 
   def file_not_found
