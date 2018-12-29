@@ -17,11 +17,11 @@
     </p>
     <p>
       <strong>Topic:</strong>
-      <%= @resource.topic.long_title %>
+      <%= @resource.topic.long_title unless @resource.topic.nil? %>
     </p>
     <p>
-      <strong>Topic:</strong>
-      <%= @resource.source.title %>
+      <strong>Source:</strong>
+      <%= @resource.source.title unless @resource.source.nil? %>
     </p>
 
     <%= link_to 'Edit', edit_resource_path(@resource) %> |
