@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  url: MyString
+  description: MyString
+  globalized_model: one
+
+two:
+  title: MyString
+  url: MyString
+  description: MyString
+  globalized_model: two

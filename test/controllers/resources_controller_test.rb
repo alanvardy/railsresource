@@ -29,14 +29,14 @@ class ResourcesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test 'should create resource when logged in' do
-  #   login_user
-  #   assert_difference('Resource.count') do
-  #     post resources_url, params: { resource: { description: @resource.description, title: @resource.title, url: @resource.url, topic_id: @resource.topic_id, source_id: @resource.source_id } }
-  #   end
+  test 'should create resource when logged in' do
+    login_user
+    assert_difference('Resource.count') do
+      post resources_url, params: { resource: { description: @resource.description, title: @resource.title, url: @resource.url, topic_id: @resource.topic_id, source_id: @resource.source_id } }
+    end
 
-  #   assert_redirected_to resource_url(Resource.last)
-  # end
+    assert_redirected_to resource_url(Resource.last)
+  end
 
   test "shouldn't create resource when not logged in" do
     assert_no_difference('Resource.count') do
