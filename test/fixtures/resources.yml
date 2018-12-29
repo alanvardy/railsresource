@@ -4,8 +4,12 @@ one:
   title: MyString
   url: MyString
   description: MyString
+  topic_id: 1
+  source_id: 1
 
 two:
   title: MyString
   url: MyString
   description: MyString
+  topic_id: 1
+  source_id: 1

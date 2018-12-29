@@ -1,13 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: one
   abbr: MyString
   color: MyString
-  resources: 
 
 two:
-  title: MyString
+  title: two
   abbr: MyString
   color: MyString
-  resources: 
+  # category: one
